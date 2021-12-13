@@ -70,11 +70,11 @@ function main(): number {
 
     let EXIT_SUCCESS: number = ReturnCode.EXIT_SUCCESS;
 
-    console.log(unspace("	        ahmad   asy   syafiq") + " love love");
-    console.log(unspace("ahmad   asy syafiq	        ") + " love love");
-	console.log(unspace("ahmad   asy syafiq	  	              	        	        ") + " love love")
-    console.log(unspace("		        ahmad asy   syafiq        ") + " love love");
-    console.log(unspace("                ahmad     asy syafiq		        ") + " love love");
+    console.log(unspace("            ahmad   asy   syafiq") + " love love");
+    console.log(unspace("ahmad   asy syafiq            ") + " love love");
+    console.log(unspace("ahmad   asy syafiq                                                ") + " love love")
+    console.log(unspace("                ahmad asy   syafiq        ") + " love love");
+    console.log(unspace("                ahmad     asy syafiq                ") + " love love");
     console.log(unspace("                ahmad asy     syafiq                ") + " love love");
 
     return EXIT_SUCCESS;

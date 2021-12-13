@@ -72,11 +72,11 @@ int main(const i32 argc, const char** argv) {
     (void)argc;
     (void)argv;
 
-    LOG(unspace("	        ahmad   asy   syafiq") << " love love")
-    LOG(unspace("ahmad   asy syafiq	        ") << " love love")
-    LOG(unspace("ahmad   asy syafiq	  	              	        	        ") << " love love")
-    LOG(unspace("		        ahmad asy   syafiq        ") << " love love")
-    LOG(unspace("                ahmad     asy syafiq        		") << " love love")
+    LOG(unspace("            ahmad   asy   syafiq") << " love love")
+    LOG(unspace("ahmad   asy syafiq            ") << " love love")
+    LOG(unspace("ahmad   asy syafiq                                                ") << " love love")
+    LOG(unspace("                ahmad asy   syafiq        ") << " love love")
+    LOG(unspace("                ahmad     asy syafiq                ") << " love love")
     LOG(unspace("                ahmad asy     syafiq                ") << " love love")
 
     return EXIT_SUCCESS;

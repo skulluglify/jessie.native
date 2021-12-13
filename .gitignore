@@ -1,5 +1,11 @@
+.shasums/*
 node_modules/*
+modules/*
 build/*
 dist/*
 */*.o
 *.o
+*/*.wasm
+*/*.wat
+*.wasm
+*.wat
