@@ -1,4 +1,4 @@
-import * as loader from "./assemblyscript/loader.js";
+import * as loader from "./modules/assemblyscript/loader.js";
 import { ReturnCode } from "./wrapper/std/utils.js";
 
 export default function main(): number { // main
