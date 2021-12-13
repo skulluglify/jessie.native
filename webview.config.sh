@@ -28,15 +28,19 @@ done
 if [ -z $(echo $WEBVIEW_CONFIG_CALL) ]; then
     CHROME=
     function check {
-        if [ "$(which chrome | grep -iv 'not found')" ]; then
+        if [ -n "$(which chrome | grep -iv 'not found')" ]; then
             CHROME=chrome
-        elif [ "$(which google-chrome | grep -iv 'not found')" ]; then
+        elif [ -n "$(which google-chrome | grep -iv 'not found')" ]; then
             CHROME=google-chrome
-        elif [ "$(which google-chrome-stable | grep -iv 'not found')" ]; then
+        elif [ -n "$(which google-chrome-stable | grep -iv 'not found')" ]; then
             CHROME=google-chrome-stable
         fi
     }
     check &>/dev/null
-    $CHROME --user-data-dir=/tmp/$DIRECTORY/userdata --new-window --app=http://127.0.0.1:$PORT/index.html?name=jessie&type=javascript &>/dev/null
-    export WEBVIEW_CONFIG_CALL=1
+    if [ -n "$CHROME" ]; then
+        $CHROME --user-data-dir=/tmp/$DIRECTORY/userdata --new-window --app=http://127.0.0.1:$PORT/index.html?name=jessie&type=javascript &>/dev/null
+        export WEBVIEW_CONFIG_CALL=1
+    else
+        echo -en "\x1b[1;31;40m unable open browser! \x1b[0m" && exit 1
+    fi
 fi
